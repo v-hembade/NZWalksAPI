@@ -1,0 +1,29 @@
+2024-01-05 13:56:01.282 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/swagger/index.html - -
+2024-01-05 13:56:03.525 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/swagger/index.html - - - 200 - text/html;charset=utf-8 2230.5283ms
+2024-01-05 13:56:03.624 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/_framework/aspnetcore-browser-refresh.js - -
+2024-01-05 13:56:03.634 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 10.3411ms
+2024-01-05 13:56:03.856 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/_vs/browserLink - -
+2024-01-05 13:56:04.031 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 175.1704ms
+2024-01-05 13:56:04.289 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/swagger/v1/swagger.json - -
+2024-01-05 13:56:05.422 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1133.1592ms
+2024-01-05 13:56:38.032 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/api/Walks?pageNumber=1&pageSize=1000 - -
+2024-01-05 13:56:38.063 +05:30 [WRN] Failed to determine the https port for redirect.
+2024-01-05 13:56:38.415 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.WalksController.GetAll (NZWalks.API)'
+2024-01-05 13:56:38.495 +05:30 [INF] Route matched with {action = "GetAll", controller = "Walks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.String, System.String, System.String, System.Nullable`1[System.Boolean], Int32, Int32) on controller NZWalks.API.Controllers.WalksController (NZWalks.API).
+2024-01-05 13:56:41.505 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'NZWalksDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2024-01-05 13:56:42.105 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-05 13:56:42.111 +05:30 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased.
+2024-01-05 13:56:44.392 +05:30 [INF] Executed DbCommand (257ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[DifficultyId], [t].[LengthInKm], [t].[Name], [t].[RegionId], [t].[WalkImageUrl], [d].[Id], [d].[Name], [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM (
+    SELECT [w].[Id], [w].[Description], [w].[DifficultyId], [w].[LengthInKm], [w].[Name], [w].[RegionId], [w].[WalkImageUrl]
+    FROM [Walks] AS [w]
+    ORDER BY (SELECT 1)
+    OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+) AS [t]
+INNER JOIN [Difficulties] AS [d] ON [t].[DifficultyId] = [d].[Id]
+INNER JOIN [Regions] AS [r] ON [t].[RegionId] = [r].[Id]
+2024-01-05 13:56:44.754 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.WalkDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-05 13:56:44.808 +05:30 [INF] Executed action NZWalks.API.Controllers.WalksController.GetAll (NZWalks.API) in 6299.2383ms
+2024-01-05 13:56:44.814 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.WalksController.GetAll (NZWalks.API)'
+2024-01-05 13:56:44.830 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/api/Walks?pageNumber=1&pageSize=1000 - - - 200 - application/json;+charset=utf-8 6797.6421ms

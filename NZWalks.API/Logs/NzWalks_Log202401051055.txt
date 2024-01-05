@@ -1,0 +1,21 @@
+2024-01-05 10:55:43.771 +05:30 [INF] User profile is available. Using 'C:\Users\admin new\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-05 10:55:48.903 +05:30 [INF] Now listening on: http://localhost:5032
+2024-01-05 10:55:48.911 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-05 10:55:48.916 +05:30 [INF] Hosting environment: Development
+2024-01-05 10:55:48.922 +05:30 [INF] Content root path: D:\projects\NZWalks.API
+2024-01-05 10:55:54.946 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/swagger - -
+2024-01-05 10:55:55.730 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/swagger - - - 301 0 - 523.6974ms
+2024-01-05 10:55:55.788 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/swagger/index.html - -
+2024-01-05 10:55:58.944 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/swagger/swagger-ui.css - -
+2024-01-05 10:55:58.946 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/swagger/index.html - - - 200 - text/html;charset=utf-8 3157.7576ms
+2024-01-05 10:55:58.949 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/swagger/swagger-ui-bundle.js - -
+2024-01-05 10:55:58.958 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/_framework/aspnetcore-browser-refresh.js - -
+2024-01-05 10:55:58.950 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/swagger/swagger-ui-standalone-preset.js - -
+2024-01-05 10:55:58.978 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 19.8924ms
+2024-01-05 10:55:59.103 +05:30 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-01-05 10:55:59.103 +05:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-01-05 10:55:59.114 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/swagger/swagger-ui-bundle.js - - - 200 1061536 text/javascript 164.8819ms
+2024-01-05 10:55:59.113 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/swagger/swagger-ui.css - - - 200 144929 text/css 168.5392ms
+2024-01-05 10:55:59.103 +05:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-01-05 10:55:59.120 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/swagger/swagger-ui-standalone-preset.js - - - 200 312163 text/javascript 169.3875ms
+2024-01-05 10:55:59.562 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/_vs/browserLink - -

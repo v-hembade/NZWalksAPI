@@ -1,0 +1,16 @@
+2024-01-05 11:00:16.838 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/api/Regions - -
+2024-01-05 11:00:16.859 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Reader)
+2024-01-05 11:00:16.873 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2024-01-05 11:00:16.879 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/api/Regions - - - 401 0 - 40.5731ms
+2024-01-05 11:00:34.501 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5032/api/Regions - -
+2024-01-05 11:00:34.594 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-01-05 11:00:34.608 +05:30 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-01-05 11:00:34.980 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'NZWalksDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2024-01-05 11:00:35.436 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImageUrl]
+FROM [Regions] AS [r]
+2024-01-05 11:00:35.510 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-01-05 11:00:35.529 +05:30 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 911.4188ms
+2024-01-05 11:00:35.531 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-01-05 11:00:35.535 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5032/api/Regions - - - 200 - application/json;+charset=utf-8 1033.8866ms

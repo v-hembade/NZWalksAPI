@@ -1,0 +1,12 @@
+2024-01-05 10:57:08.973 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5032/api/Auth/Login application/json 60
+2024-01-05 10:57:08.988 +05:30 [INF] Executing endpoint 'NZWalks.API.Controllers.AuthController.Login (NZWalks.API)'
+2024-01-05 10:57:08.995 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(NZWalks.API.Models.DTO.LoginRequestDto) on controller NZWalks.API.Controllers.AuthController (NZWalks.API).
+2024-01-05 10:57:09.041 +05:30 [INF] Entity Framework Core 6.0.25 initialized 'NZWalksAuthDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.25' with options: None
+2024-01-05 10:57:09.053 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2024-01-05 10:57:09.061 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-01-05 10:57:09.069 +05:30 [INF] Executed action NZWalks.API.Controllers.AuthController.Login (NZWalks.API) in 67.7481ms
+2024-01-05 10:57:09.078 +05:30 [INF] Executed endpoint 'NZWalks.API.Controllers.AuthController.Login (NZWalks.API)'
+2024-01-05 10:57:09.081 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5032/api/Auth/Login application/json 60 - 400 - text/plain;+charset=utf-8 107.6741ms
